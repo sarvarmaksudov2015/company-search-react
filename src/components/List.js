@@ -17,17 +17,19 @@ const List = (props) => {
         return false
     })
 
-    return <div > {
+    return <div onMouseOver = {
+            {} } > {
             display.map((item, id) => {
-                return <div key = { id }
+                return <div id = "itemList"
+                key = { id }
                 onClick = {
                         () => {
                             props.setObject(item)
                         }
                     } >
                     <
-                    h3 > { item.name } < /h3> <
-                    h4 > { item.address } < /h4> <
+                    h5 > { item.name } < /h5> <
+                    h6 > { item.address } < /h6> <
                     /div>
             })
         } <
